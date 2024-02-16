@@ -223,7 +223,7 @@ function dispalyProduct() {
   let empty = "";
   for (let i = 0; i < products.length; i++) {
     empty += `
-          <div class="col-4">
+          <div class="col-md-4">
             <div class="item">
               <img src="${products[i].img}" class="w-100" alt="${products[i].name}">
               <h3>${products[i].title}</h3>
