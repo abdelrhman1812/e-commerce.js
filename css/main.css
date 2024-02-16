@@ -24,6 +24,7 @@ body {
 a {
   text-decoration: none;
 }
+
 ::before,
 ::after {
   box-sizing: border-box;
@@ -85,6 +86,7 @@ nav {
       color: #fff;
     }
   }
+
   #nameUser {
     margin: 0 10px;
     text-transform: capitalize;
@@ -100,38 +102,57 @@ nav {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+
   .row {
     width: 70%;
     text-align: center;
     margin: 20px auto;
     padding: 30px 10px;
+
+    @media (max-width: 767px) {
+      width: 80% !important;
+      padding: 20px 5px;
+
+    }
+
     .form {
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .item {
         label {
           display: block;
           text-align: start !important;
           margin-left: 10px;
           font-weight: 600;
+
+
         }
+
         input {
           height: 48px;
           padding: 10px;
-          margin: 10px;
+          margin: 10px 0;
           border: none;
           width: 400px;
           border-radius: 6px;
           border: 1px solid #ccc;
           transition: all 0.5s ease;
           box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+
           &:focus {
             transition: all 0.5s ease;
             border-color: var(--skin-color);
           }
+
+          @media (max-width: 767px) {
+            width: 100% !important
+          }
         }
       }
+
       button {
         border: none;
         color: #fff;
@@ -141,6 +162,7 @@ nav {
         transition: all 0.5s ease;
         background-color: #ffc107;
         box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
         &:hover {
           opacity: 0.7;
           letter-spacing: 1px;
@@ -148,11 +170,13 @@ nav {
           transition: all 0.5s ease;
         }
       }
+
       p {
         a {
           font-weight: 600;
           transition: all 0.5s ease;
           color: var(--skin-color);
+
           &:hover {
             opacity: 0.7;
             transition: all 0.5s ease;
@@ -167,18 +191,22 @@ nav {
 
 .products {
   padding-top: 100px;
+
   .item {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
     h3 {
       margin: 15px 0;
     }
+
     p {
       font-size: 16px;
       font-weight: bold;
     }
+
     .icons {
       display: flex;
       justify-content: space-between;
