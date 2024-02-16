@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/normaliz.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+
+
+
+    <!-- Register -->
+
+    <section class="register">
+        <div class="container">
+            <div class="row shadow rounded-5">
+                <h2>Registetr</h2>
+                <div class="form">
+                    <div class="item">
+                        <label for="userName">Name</label>
+                        <input type="text" placeholder="Your Name" id="userName">
+                        <span class="text-danger d-none" id="nameValid">invalid Name enter more 3 char</span>
+                    </div>
+
+                    <div class="item">
+                        <label for="userEmail">Email</label>
+                        <input type="email" class="emailValidation" placeholder="Your Email" id="userEmail">
+                        <span class="text-danger d-none" id="validEmailRegister">invalid Email enter email valid</span>
+
+                    </div>
+                    <div class="item">
+                        <label for="userPassword">Password</label>
+                        <input type="password" placeholder="Your Password" id="userPassword">
+                        <span class="text-danger d-none" id="validPasswordRegister">invalid Password enter 5 char</span>
+                        <span class="text-danger d-none" id="isExist">Email Is Exist</span>
+                        <span class="text-success d-none" id="successRegister">success</span>
+                    </div>
+
+                    <button id="btnRegister " onclick="register()">Register</button>
+                    <p>Alreedy Have Account ? <a href="login.html">Login </a></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

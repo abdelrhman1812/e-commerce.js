@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/normaliz.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+
+
+
+
+    <!-- Login -->
+    <section class="register">
+        <div class="container">
+            <div class="row shadow rounded-5">
+                <h2>Login</h2>
+                <div class="form">
+
+                    <div class="item">
+                        <label for="userEmail">Email</label>
+                        <input type="email" class="emailValidation" placeholder="Your Email" id="userLoginEmail">
+                        <span class="text-danger d-none" id="validationLoginemail">invalid Email</span>
+
+                    </div>
+                    <div class="item">
+                        <label for="userPassword">Password</label>
+                        <input type="password" placeholder="Your Password" id="userLoginPassword">
+                        <span class="text-danger d-none d-block" id="validationLoginPassword">invalid Password</span>
+                        <span class="text-danger d-none d-block " id="invalidValues">Email Is Not Exist </span>
+                        <span class="text-success d-none d-block" id="successLogin">success</span>
+
+
+                    </div>
+
+                    <button id="btnLogin" onclick="login()">Login</button>
+                    <p>Don`t Have Account ? <a href="register.html">Rejester </a></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
