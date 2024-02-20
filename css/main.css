@@ -21,6 +21,10 @@ body {
   box-sizing: border-box;
 }
 
+i {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
@@ -54,14 +58,14 @@ ul {
 }
 
 .section-title::after {
-  content: "";
-  height: 4px;
-  width: 25px;
-  background-color: #ffc107;
-  position: absolute;
-  top: 100%;
   left: 0;
+  top: 100%;
+  content: "";
+  width: 25px;
+  height: 4px;
   margin-top: 8px;
+  position: absolute;
+  background-color: #ffc107;
 }
 
 /* ========== Nav Bar  ========== */
@@ -69,10 +73,20 @@ ul {
 nav {
   padding: 15px !important;
 
+  a {
+    img {
+      width: 40px;
+    }
+  }
+
   ul {
     li {
       a {
         font-size: 18px !important;
+      }
+
+      a.active {
+        color: #ffc107 !important;
       }
     }
   }
@@ -81,9 +95,28 @@ nav {
     border: none;
   }
 
+  i {
+    font-size: 24px !important;
+    opacity: 0.5;
+  }
+
   .registerBtn {
     a {
+      border: none;
       color: #fff;
+      margin: 10px 5px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: all 0.5s ease;
+      background-color: #ffc107;
+
+      box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+      &:hover {
+        opacity: 0.7;
+        letter-spacing: 1px;
+        transition: all 0.5s ease;
+      }
     }
   }
 
@@ -95,13 +128,14 @@ nav {
   }
 }
 
+
 /* ========== Register  ========== */
 
 .register {
   display: flex;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 
   .row {
     width: 70%;
@@ -110,37 +144,33 @@ nav {
     padding: 30px 10px;
 
     @media (max-width: 767px) {
-      width: 80% !important;
-      padding: 20px 5px;
-
+      width: 100%;
     }
 
     .form {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
+      overflow: hidden;
 
       .item {
         label {
           display: block;
-          text-align: start !important;
-          margin-left: 10px;
           font-weight: 600;
-
-
+          margin-left: 10px;
+          text-align: start !important;
         }
 
         input {
           height: 48px;
-          padding: 10px;
-          margin: 10px 0;
+          margin: 10px;
           border: none;
           width: 400px;
+          padding: 10px;
           border-radius: 6px;
           border: 1px solid #ccc;
           transition: all 0.5s ease;
           box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-
 
           &:focus {
             transition: all 0.5s ease;
@@ -148,7 +178,8 @@ nav {
           }
 
           @media (max-width: 767px) {
-            width: 100% !important
+            width: 300px;
+            margin: 0;
           }
         }
       }
@@ -187,7 +218,7 @@ nav {
   }
 }
 
-/* products */
+/* ========== Products  ========== */
 
 .products {
   padding-top: 100px;
@@ -210,6 +241,72 @@ nav {
     .icons {
       display: flex;
       justify-content: space-between;
+    }
+  }
+}
+
+/* ========== Cart  ========== */
+
+.cart {
+  padding: 100px 0;
+
+  h4 {
+    text-align: center;
+    font-size: 40px;
+    color: #ccc;
+  }
+
+  .product {
+    padding: 10px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+    .image {
+      img {
+        width: 100px;
+      }
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p.title {
+        font-weight: 600;
+        font-size: 22px;
+      }
+
+      p.price {
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      i {
+        margin: 10px 0;
+        font-size: 18px;
+        transition: all 0.5s ease;
+
+        &:hover {
+          transform: scale(1.1) translate(-5px, 5px);
+          transition: all 0.5s ease;
+        }
+      }
+
+      button {
+        color: #fff;
+      }
     }
   }
 }

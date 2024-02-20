@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/normaliz.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -12,9 +12,12 @@
 </head>
 
 <body>
+
+    <!-- ========== Navbar ========== -->
+
     <nav class="navbar navbar-expand-lg shadow">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/Logo/shop-online-store-ecommerce-svgrepo-com.svg" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,47 +37,36 @@
                         <a class="nav-link " aria-current="page" href="index.html">Contact Us</a>
                     </li>
                 </ul>
-
-
+                <!-- User Name -->
                 <span id="nameUser"></span>
-
-
-
+                <i class="fa-solid fa-cart-shopping text-warning mx-2 fa-1x"></i>
             </div>
         </div>
     </nav>
-    <!-- Login -->
-    <section class="register">
+
+
+
+    <!-- ========== Products ========== -->
+    <section class="cart">
+        <!-- Elemet Is Display Block if Cart Empty -->
+        <h4 class="d-none" id="empty"> Your Cart Is empty
+            <i class="fa-regular fa-trash-can"></i>
+        </h4>
+        <!-- Elemet Is Contain Total Price -->
+
+        <h2 class="text-center text-success fw-bold">Total Price : <span class="fw-light text-black" id="total"></span>
+        </h2>
+        <!-- Container That Contain Product -->
         <div class="container">
-            <div class="row shadow rounded-5">
-                <h2>Login</h2>
-                <div class="form">
-
-                    <div class="item">
-                        <label for="userEmail">Email</label>
-                        <input type="email" class="emailValidation" placeholder="Your Email" id="userLoginEmail">
-                        <span class="text-danger d-none" id="validationLoginemail">invalid Email</span>
-                    </div>
-                    <div class="item">
-                        <label for="userPassword">Password</label>
-                        <input type="password" placeholder="Your Password" id="userLoginPassword">
-                        <span class="text-danger d-none d-block" id="validationLoginPassword">invalid Password</span>
-                        <span class="text-danger d-none d-block " id="invalidValues">Email Is Not Exist </span>
-                        <span class="text-success d-none d-block" id="successLogin">success</span>
-                    </div>
-
-                    <button id="btnLogin" onclick="login()">Login</button>
-                    <p>Don`t Have Account ? <a href="register.html">Rejester </a></p>
-                </div>
-            </div>
+            <h2 class="section-title ">Products</h2>
         </div>
-
+        <div class="container" id="cartProduct">
+        </div>
     </section>
-
-
 
     <script src="JS/bootstrap.bundle.min.js"></script>
     <script src="JS/main.js"></script>
+
 </body>
 
 </html>
