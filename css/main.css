@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --skin-color: #ffc107;
+  --skin-color: #fb8959;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
   padding: 0;
   line-height: 1.5;
   font-size: 16px;
-  background-color: #f2f2fc;
+  background-color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -54,7 +54,7 @@ ul {
   height: 4px;
   width: 50px;
   position: absolute;
-  background-color: #ffc107;
+  background-color: var(--skin-color);
 }
 
 .section-title::after {
@@ -65,13 +65,14 @@ ul {
   height: 4px;
   margin-top: 8px;
   position: absolute;
-  background-color: #ffc107;
+  background-color: var(--skin-color);
 }
 
 /* ========== Nav Bar  ========== */
 
 nav {
   padding: 15px !important;
+  background-color: #fff;
 
   a {
     img {
@@ -86,7 +87,7 @@ nav {
       }
 
       a.active {
-        color: #ffc107 !important;
+        color: var(--skin-color) !important;
       }
     }
   }
@@ -98,6 +99,7 @@ nav {
   i {
     font-size: 24px !important;
     opacity: 0.5;
+    color: #fb8959;
   }
 
   .registerBtn {
@@ -108,7 +110,7 @@ nav {
       padding: 5px 10px;
       border-radius: 6px;
       transition: all 0.5s ease;
-      background-color: #ffc107;
+      background-color: #fb8959;
 
       box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 
@@ -120,6 +122,24 @@ nav {
     }
   }
 
+  #logoutBtn {
+    border: none;
+    color: #fff;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    background-color: #fb8959;
+
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+    &:hover {
+      opacity: 0.7;
+      letter-spacing: 1px;
+      transition: all 0.5s ease;
+    }
+  }
+
   #nameUser {
     margin: 0 10px;
     text-transform: capitalize;
@@ -127,6 +147,72 @@ nav {
     font-weight: 600;
   }
 }
+
+header {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .0)),
+    url('../images/header2.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  .data {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+
+      margin: 0;
+      font-size: 50px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 100px;
+      margin: 0;
+      text-transform: uppercase;
+
+      span.on {
+        color: #4d90fe;
+      }
+
+      span.line {
+        color: var(--skin-color);
+      }
+    }
+
+    span {
+      color: #000;
+
+    }
+
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 10px;
+      color: #fff;
+      font-size: 18px;
+      margin-top: 50px;
+      width: 170px;
+      background-color: var(--skin-color);
+    }
+
+  }
+
+
+}
+
+
+
+
+
 
 
 /* ========== Register  ========== */
@@ -191,7 +277,7 @@ nav {
         padding: 5px 10px;
         border-radius: 6px;
         transition: all 0.5s ease;
-        background-color: #ffc107;
+        background-color: var(--skin-color);
         box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 
         &:hover {
@@ -221,6 +307,7 @@ nav {
 /* ========== Products  ========== */
 
 .products {
+
   padding-top: 100px;
 
   .item {
@@ -228,6 +315,13 @@ nav {
     border-radius: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+    img {
+      display: block;
+      margin: auto;
+      width: 70% !important;
+      text-align: center;
+    }
 
     h3 {
       margin: 15px 0;
@@ -247,8 +341,39 @@ nav {
 
 /* ========== Cart  ========== */
 
+
+header.cart {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+    url('../images/header2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+
+  .links {
+    padding-left: 60px;
+
+    a {
+      font-weight: 700;
+      font-size: 26px;
+      color: #ccc;
+    }
+
+    a.active {
+
+      color: var(--skin-color);
+    }
+  }
+}
+
+
+
 .cart {
   padding: 100px 0;
+
+  h2.fw-bold {
+    color: var(--skin-color);
+  }
 
   h4 {
     text-align: center;

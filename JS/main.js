@@ -15,6 +15,10 @@ let logoutBtn = document.getElementById("logoutBtn");
 /* element contain Total Price */
 let total = document.getElementById("total");
 
+
+let lengthCart = document.getElementById("lengthCart")
+
+let numOfItems;
 /* check about users in array or no */
 let users;
 if (localStorage.getItem("userData") == null) {
@@ -186,7 +190,12 @@ function logout() {
   localStorage.removeItem("name");
   nameUser.innerHTML = "";
   window.location.href = "login.html";
+
+
+
+
 }
+
 
 /* =========================== Products ===========================  */
 
@@ -268,20 +277,7 @@ let products = [
     price: 15000,
     qunet: 1,
   },
-  {
-    id: 11,
-    img: "images/mobile/phone-11.png",
-    title: "Iphone 11",
-    price: 15000,
-    qunet: 1,
-  },
-  {
-    id: 12,
-    img: "images/mobile/phone-12.png",
-    title: "Iphone 12",
-    price: 15000,
-    qunet: 1,
-  },
+
 ];
 
 /* ========= Dispaly Product =========  */
@@ -311,7 +307,7 @@ function dispalyProduct() {
 
   container.innerHTML = empty;
 }
-let numOfItems;
+
 /* check for products is existing or no in cart that contain producsts  */
 let cartProducts;
 let emptyMessage = document.getElementById("empty");
@@ -323,7 +319,6 @@ if (localStorage.getItem("product") == null) {
   numOfItems = cartProducts.length
 }
 
-let lengthCart = document.getElementById("lengthCart")
 if (lengthCart) {
   lengthCart.innerHTML = numOfItems
 }
@@ -359,7 +354,6 @@ function addToCart(productId) {
     window.location.href = "login.html";
   }
   numOfItems = cartProducts.length
-  let lengthCart = document.getElementById("lengthCart")
   if (lengthCart) {
     lengthCart.innerHTML = numOfItems
   }
@@ -505,6 +499,10 @@ function showAndDisplay() {
     if (registerBtn) {
       registerBtn.classList.replace("d-none", "d-block");
       logoutBtn.classList.replace("d-block", "d-none");
+      if (lengthCart) {
+        lengthCart.innerHTML = 0
+      }
+
     }
   } else {
     if (registerBtn) {
@@ -520,6 +518,7 @@ document.addEventListener("DOMContentLoaded", function () {
   dispalyProduct();
   if (localStorage.getItem("name")) {
     dispalyProductCart();
+
   }
 
 
@@ -536,3 +535,17 @@ if (cartProducts.length == 0) {
 
 
 
+
+
+// // Slider
+
+// $(document).ready(function () {
+//   $('.slider').owlCarousel({
+//     items: 1,
+//     loop: true,
+//     autoplay: true,
+//     autoplayTimeout: 3000,
+//     // autoWidth: true
+//     autoHeight: true
+//   });
+// });
