@@ -73,6 +73,12 @@ ul {
 nav {
   padding: 15px !important;
   background-color: #fff;
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+  @media (max-width:991px) {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+  }
 
   a {
     img {
@@ -111,8 +117,14 @@ nav {
       border-radius: 6px;
       transition: all 0.5s ease;
       background-color: #fb8959;
-
       box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+      @media (max-width:991px) {
+        width: 100px;
+        text-align: center;
+        margin: 30px 10px 0 0;
+        display: inline-block;
+      }
 
       &:hover {
         opacity: 0.7;
@@ -130,8 +142,12 @@ nav {
     border-radius: 6px;
     transition: all 0.5s ease;
     background-color: #fb8959;
-
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+    @media (max-width:991px) {
+      width: 150px;
+      margin: 0;
+    }
 
     &:hover {
       opacity: 0.7;
@@ -145,6 +161,10 @@ nav {
     text-transform: capitalize;
     font-size: 18px;
     font-weight: 600;
+
+    @media (max-width:991px) {
+      margin: 10px 0;
+    }
   }
 }
 
@@ -211,9 +231,16 @@ header {
 
 
 
+.navbar-toggler {
+  border: 1px solid var(--skin-color);
 
 
+}
 
+.navbar-toggler:focus {
+
+  box-shadow: 0 0 0 var(--skin-color);
+}
 
 /* ========== Register  ========== */
 
@@ -308,7 +335,7 @@ header {
 
 .products {
 
-  padding-top: 100px;
+  padding: 100px 0;
 
   .item {
     padding: 20px;
@@ -335,6 +362,11 @@ header {
     .icons {
       display: flex;
       justify-content: space-between;
+    }
+
+    &:hover {
+      transition: all 0.5s;
+      border-color: var(--skin-color);
     }
   }
 }

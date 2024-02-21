@@ -473,6 +473,11 @@ function rmPorduct(cartProdctId) {
     }
   }
   dispalyProductCart();
+
+  numOfItems = cartProducts.length
+  if (lengthCart) {
+    lengthCart.innerHTML = numOfItems
+  }
 }
 
 /* check to dispaly element none or block */
@@ -526,7 +531,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*   condition to display block message when cart is empt */
 
-if (cartProducts.length == 0) {
+if (cartProducts.length == 0 || localStorage.getItem("name") == null) {
   if (emptyMessage) {
     emptyMessage.classList.replace("d-none", "d-block");
   }

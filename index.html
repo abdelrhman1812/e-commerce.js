@@ -41,17 +41,19 @@
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="cart.html">Cart </a>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link d-none d-lg-block " aria-current="page" href="cart.html">Cart </a>
+
                     </li>
                 </ul>
 
-                <span id="nameUser"></span>
-
-                <a href="cart.html" class="position-relative"> <i class="fa-solid fa-cart-shopping mx-2 fa-1x"></i>
+                <a href="cart.html" class="position-relative text-dark"> <span class="d-lg-none">Cart</span> <i
+                        class="fa-solid fa-cart-shopping mx-2 fa-1x"></i>
                     <span id="lengthCart"
-                        class="px-2 position-absolute end-0 bottom-100 text-bg-danger rounded-circle  "></span>
+                        class="px-2 position-absolute end-0 bottom-50 text-bg-danger rounded-circle  "></span>
                 </a>
+                <span id="nameUser" class="d-block"></span>
+
                 <!-- Span Contain Length at cart  -->
                 <!-- Btns Register and Login -->
                 <div id="registerBtn" class="registerBtn d-none   ">
